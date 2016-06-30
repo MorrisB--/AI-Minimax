@@ -42,6 +42,7 @@ public class TicTacToe {
 				break;
 			}
 			
+			computerPlays(board);
 			
 		}
 		keyboard.close();
@@ -59,7 +60,9 @@ public class TicTacToe {
 			board[row][column] = 'X';
 	}
 	
-	
+	public static void computerPlays(char[][] board){
+		
+	}
 	/*
 	 * First check what will happen if the computer plays there
 	 * 	Check wins
