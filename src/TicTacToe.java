@@ -59,6 +59,15 @@ public class TicTacToe {
 			board[row][column] = 'X';
 	}
 	
+	
+	/*
+	 * First check what will happen if the computer plays there
+	 * 	Check wins
+	 * If checkwins == false -> what will happen if the player plays here?
+	 * 	Check wins
+	 * If check wins == false -> what will happen if computer plays at next location?
+	 * 	If check wins == true, than return 1, or add one to the counter 
+	 */
 	// First win
 	// Second block
 	// Best Win
