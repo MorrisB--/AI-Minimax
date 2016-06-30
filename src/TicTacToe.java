@@ -6,7 +6,8 @@ public class TicTacToe {
 		Scanner keyboard = new Scanner(System.in);
 		boolean playing = true;
 		char[][] board = new char[3][3];
-
+		fill(board);
+	
 		while (playing) {
 
 			System.out.print("Choose a location: ");
@@ -60,7 +61,20 @@ public class TicTacToe {
 			board[row][column] = 'X';
 	}
 	
+	public static void fill(char[][] board){
+		for(int i = 0; i<board.length;i++)
+			for(int j =0; j<board.length;j++)
+				board[i][j] = 0;
+	}
+	
 	public static void computerPlays(char[][] board){
+		
+		char[][] tempBoard = new char[3][3];
+		
+		// Copying the current board into the temp board
+		for(int i = 0; i<board.length;i++)
+			System.arraycopy(board[i], 0, tempBoard[i], 0, board[i].length);
+		
 		
 	}
 	/*
