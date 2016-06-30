@@ -58,4 +58,8 @@ public class TicTacToe {
 		if (isAvailable(board, row, column))
 			board[row][column] = 'X';
 	}
+	
+	// First win
+	// Second block
+	// Best Win
 }
