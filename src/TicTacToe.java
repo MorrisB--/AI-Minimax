@@ -67,6 +67,15 @@ public class TicTacToe {
 				board[i][j] = 0;
 	}
 	
+	public static boolean isFull(char[][] board){
+		boolean isFull = true;
+		for(int i = 0; i < board.length; i++)
+			for (int j = 0; j < board[i].length; j++)
+				if (board[i][j] == 0)
+					isFull = false;
+		return isFull;
+	}
+	
 	public static void computerPlays(char[][] board){
 		
 		char[][] tempBoard = new char[3][3];
@@ -74,6 +83,27 @@ public class TicTacToe {
 		// Copying the current board into the temp board
 		for(int i = 0; i<board.length;i++)
 			System.arraycopy(board[i], 0, tempBoard[i], 0, board[i].length);
+		
+		// Step 1
+		// Play at next open location
+		// Check if that location is a win (-1) loss (+1) or nothing, return that number
+		
+		
+		// BASE CASE
+		// if board is full and no winner return 0
+		// if computer wins return -1
+		// if user wins return 1
+		
+		// Checking if the board is full
+		if (isFull(tempBoard))
+			return 0;
+		// Checking if the computer won
+		if(checkWins(tempBoard) == -1)
+			return -1;
+		// Checking if the user won
+		if(checkWins(tempBoard)==1)
+			return 1;
+			
 		
 		
 	}
